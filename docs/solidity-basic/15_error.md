@@ -117,7 +117,7 @@ contract testAsset{
 
   
 
-在 0.8.0 版本之前，当 assert 式异常发生时，EVM 会触发 `invalid` 操作码，同时会消耗掉素有未使用的 Gas 。
+在 0.8.0 版本之前，当 assert 式异常发生时，EVM 会触发 `invalid` 操作码，同时会消耗掉所有未使用的 Gas 。
 
 在 0.8.0 及之后版本，当 assert 式异常发生时，EVM 会使用 `REVERT` 操作码回滚交易，剩余未使用的 Gas 将返回给交易发起者。
 
